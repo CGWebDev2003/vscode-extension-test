@@ -1,24 +1,26 @@
 'use strict';
-
+import { start } from 'repl';
 import * as vscode from 'vscode';
+import { Position } from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
 	const disposable = vscode.commands.registerCommand('extension.reverseWord', function() {
-		// Get the active text editor
-		const editor = vscode.window.activeTextEditor;
+        const editor = vscode.window.activeTextEditor;
 
-		if (editor) {
-			const document = editor.document;
-			const selection = editor.selection;
+        if(editor) {
+            let document = editor.document;
+            let selection = editor.selection;
+            let curPos = editor.selection.active;
+            let curLine = curPos.line+1;
+            let curChar = curPos.character+1;
 
-			// Get the word within the selection
-			const word = document.getText(selection);
-			const reversed = word.split('').reverse().join('');
-			editor.edit(editBuilder => {
-				editBuilder.replace(selection, reversed);
-			});
-		}
-	});
 
-	context.subscriptions.push(disposable);
-}
+            editor.edit(editBuilder => {
+                editBuilder.insert(curPos, "function newFunction(param) {\n    console.log(param);\n }");
+            });    
+        }
+
+        context.subscriptions.push(disposable);
+    }
+
+)}

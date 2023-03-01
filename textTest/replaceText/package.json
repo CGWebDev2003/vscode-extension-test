@@ -23,8 +23,18 @@
             {
                 "command": "extension.reverseWord",
                 "title": "Reverse Word"
+            },
+            {
+                "command": "extension.addFunction",
+                "title": "Add Function"
             }
-        ]
+        ],
+        "snippets": [
+            {
+              "language": "javascript",
+              "path": "./snippets.json"
+            }
+          ]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
