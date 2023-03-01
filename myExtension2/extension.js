@@ -9,7 +9,7 @@ module.exports = {
 // This method is called when your extension is activated
 function activate(context) {
   // This must match the command field in the package.json
-  const commandID = "example.helloWorld";
+  const commandID = "myExtension2.helloWorld";
 
   let disposable = vscode.commands.registerCommand(commandID, sayHello);
 
