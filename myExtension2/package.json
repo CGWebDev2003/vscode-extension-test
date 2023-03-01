@@ -1,7 +1,7 @@
 {
     "name": "myExtension2",
     "displayName": "My Extension 2",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "icon": "icon.ico",
     "publisher": "MayCoDev",
     "engines": {
@@ -17,6 +17,29 @@
           "command": "myExtension2.helloWorld",
           "title": "Hello World",
           "category": "HelloWorld"
+        }
+      ],
+      "iconThemes": [
+        {
+          "id": "CGTheme",
+          "label": "CG Theme",
+          "path": "./fileIcons/cgIconTheme.json"
+        }
+      ],
+      "languages": [
+        {
+          "id": "html",
+          "icon": {
+            "light": "./fileIcons/html_file.png",
+            "dark": "./fileIcons/html_file.png"
+          }
+        },
+        {
+          "id": "js",
+          "icon": {
+            "light": "./fileIcons/js_file.png",
+            "dark": "./fileIcons/js_file.png"
+          }
         }
       ]
     },
