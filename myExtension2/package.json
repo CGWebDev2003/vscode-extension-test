@@ -1,0 +1,27 @@
+{
+    "name": "myExtension2",
+    "displayName": "My Extension 2",
+    "version": "0.0.1",
+    "icon": "icon.ico",
+    "publisher": "MayCoDev",
+    "engines": {
+      "vscode": "^1.32.0"
+    },
+    "activationEvents": [
+      "onCommand:example.helloWorld"
+    ],
+    "main": "extension.js",
+    "contributes": {
+      "commands": [
+        {
+          "command": "example.helloWorld",
+          "title": "Hello World",
+          "category": "Example"
+        }
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/HansUXdev/B5-SNIPPETS"
+    }
+  }
