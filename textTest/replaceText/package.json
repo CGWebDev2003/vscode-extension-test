@@ -27,14 +27,12 @@
             {
                 "command": "extension.addFunction",
                 "title": "Add Function"
-            }
-        ],
-        "snippets": [
+            },
             {
-              "language": "javascript",
-              "path": "./snippets.json"
+                "command": "extension.sayHello",
+                "title": "Hello World"
             }
-          ]
+        ]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
